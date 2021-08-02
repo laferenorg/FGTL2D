@@ -1,5 +1,3 @@
-<img align="left" src="https://github.com/laferenorg/FGTL2D/blob/main/assets/icon/icon.gif" width="288px">
-
 # FGTL2D
 **This is a library for creating 2D Games for terminal and it is only for Linux.**
 
