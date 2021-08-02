@@ -19,7 +19,7 @@ will already be done but Linux is an open source platform you can use anywhere.
 
 CONTRIBUTE
 ----------
-You can contribute, and all you have to do is read the rules in the CONTRIBUTE file [CONTRIBUTE](https://github.com/laferenorg/FGTL2D/blob/main/CONTRIBUTING.md).
+You can contribute, and all you have to do is read the rules in the CONTRIBUTE file [CONTRIBUTE](./CONTRIBUTING.html).
 And all you have to do is look at the issue and put it in a project and work on it, or look at the project to see what to work on.
 
 Features
