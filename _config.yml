@@ -1,1 +1,6 @@
+title: FGTL 2D
+description: This is a library for creating 2D Games for terminal and it is only for Linux.
+show_downloads: false
+google_analytics: UA-201778945-1
+logo: https://github.com/defenselaferen/FGTL2D/blob/github-pages/assets/icon/icon.gif?raw=true
 theme: jekyll-theme-minimal
