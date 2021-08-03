@@ -82,3 +82,8 @@ install the dependencies used in this project.
     `<compiler> <code>.<c>/<cpp> /usr/lib/libfgtl2d.so`. That part 
     is the one that doesn't use `USING_PROPERTY`. And this one uses 
     `USING_PROPERTY`: `<compiler> <code>.<c>/<cpp> /usr/lib/libfgtl2d.so.1.0.0`
+
+## Documentation
+| Group | Pages                                                           |
+|:------|-----------------------------------------------------------------|
+| FGTL  | [FGTL_Init](../fgtl/init.html), [FGTL_Close](../fgtl/quit.html) |
