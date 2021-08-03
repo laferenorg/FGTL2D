@@ -1,6 +1,6 @@
-| Home                     |
-|:-------------------------|
-| [Home](../index.html)    |
+| Home                     | Index                                     |
+|:-------------------------|:------------------------------------------|
+| [Home](../index.html)    | [Index](../first_time/first_time.html)    |
 
 ## Init
 This section is used to initialize the required dependencies. 
