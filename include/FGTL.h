@@ -9,17 +9,45 @@
 #define FGTL_HEADER_H
 
 /*
- * @parameter { void }
- * This function for intialize dependencies
- * like SDL2, this for using features
- * in dependencies
+ * If you see code
+ * #ifdef __cplusplus
+ * extern "C" {
+ * #endif
+ * 
+ * This used for, make if you use the c++ compiler, 
+ * it will be extern in c language
  */
-void FGTL_Init(void);
 
-/*
- * @parameter { void }
- * This function for quit all dependencies
+#ifdef __cplusplus
+extern "C" {
+#endif
+	/*
+	 * @parameter { void }
+	 * This function for intialize dependencies
+	 * like SDL2, this for using features
+	 * in dependencies
+	 */
+	void FGTL_Init(void);
+#ifdef __cplusplus
+}
+#endif
+
+/* The section to load the header 
+ * file in the middle of the init 
+ * function and the quit function 
  */
-void FGTL_Close(void);
+#include "FGTL_File.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+	/*
+	 * @parameter { void }
+	 * This function for quit all dependencies
+	 */
+	void FGTL_Close(void);
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* End of FGTL_HEADER_H */
