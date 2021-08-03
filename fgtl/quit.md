@@ -1,6 +1,6 @@
-| Home                     |
-|:-------------------------|
-| [Home](../index.html)    |
+| Home                     | Index                                     |
+|:-------------------------|:------------------------------------------|
+| [Home](../index.html)    | [Index](../first_time/first_time.html)    |
 
 ## Quit
 This section is used to quit dependencies so I don't know the 
