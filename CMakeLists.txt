@@ -43,4 +43,5 @@ if(FGTL_USING_PROPERTY)
 endif(FGTL_USING_PROPERTY)
 
 # Linking
-target_link_libraries(${PROJECT_NAME} ${SDL2_LIBRARIES})
+target_link_libraries(${PROJECT_NAME} 
+	${SDL2_LIBRARIES} "-lstdc++fs")
