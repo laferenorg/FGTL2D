@@ -85,5 +85,5 @@ install the dependencies used in this project.
 
 ## Documentation
 | Group | Pages                                                           |
-|:------|-----------------------------------------------------------------|
+|:------|:----------------------------------------------------------------|
 | FGTL  | [FGTL_Init](../fgtl/init.html), [FGTL_Close](../fgtl/quit.html) |
