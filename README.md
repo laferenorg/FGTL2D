@@ -34,3 +34,7 @@ This project definitely needs dependencies, And you have to make sure you can us
 Commonly used projects are below.
 
 - **SDL2**, We will use **SDL2** as its dependencies because there are several features that can be used in it.
+
+Documentation
+-------------
+If you want to go to the documentation file, you can go through this link: [DOCUMENTATION](./first_time/first_time.html).
