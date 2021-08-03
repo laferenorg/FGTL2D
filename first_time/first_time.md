@@ -84,6 +84,7 @@ install the dependencies used in this project.
     `USING_PROPERTY`: `<compiler> <code>.<c>/<cpp> /usr/lib/libfgtl2d.so.1.0.0`
 
 ## Documentation
+
 | Group | Pages                                                           |
 |:------|:----------------------------------------------------------------|
 | FGTL  | [FGTL_Init](../fgtl/init.html), [FGTL_Close](../fgtl/quit.html) |
