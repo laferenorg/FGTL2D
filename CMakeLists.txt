@@ -24,7 +24,10 @@ if(NOT CMAKE_C_STANDARD)
 endif(NOT CMAKE_C_STANDARD)
 
 # Check Required Dependencis
+INCLUDE(FindPkgConfig)
 find_package(SDL2 REQUIRED)
+PKG_SEARCH_MODULE(SDL2MIXER 
+	REQUIRED SDL2_mixer >= 2.0.0)
 
 # Include directory
 include_directories("include/")
@@ -44,4 +47,5 @@ endif(FGTL_USING_PROPERTY)
 
 # Linking
 target_link_libraries(${PROJECT_NAME} 
-	${SDL2_LIBRARIES} "-lstdc++fs")
+	${SDL2_LIBRARIES} "-lSDL2_mixer"
+	"-lstdc++fs")
