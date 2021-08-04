@@ -10,6 +10,7 @@
 
 /* Include header SDL2 */
 #include <SDL2/SDL.h>
+#include <SDL2/SDL_mixer.h>
 
 /* Include header */
 #include "FGTL.h"
@@ -26,12 +27,30 @@ void FGTL_Init(void) \
 	 * and check if intialize has been failed
 	 * and show into console what's error
 	 */
-	if (SDL_Init(SDL_INIT_TIMER | SDL_INIT_EVENTS) == 0) \
+	if (SDL_Init(SDL_INIT_TIMER | SDL_INIT_EVENTS | SDL_INIT_AUDIO) \
+		!= 0) \
 	{
 		/* Print Error Into Console And exit */
 		fprintf(stderr, "[FGTL {Error}]: `%s`\n", SDL_GetError());
 		exit(1);
 	}
+
+	/* Intialize dependencies sound
+	 * and check if dependencies have error
+	 */
+	if(Mix_OpenAudio(MIX_DEFAULT_FREQUENCY, \
+		MIX_DEFAULT_FORMAT, 2, 4096) == -1) \
+	{
+		/* Print Error Into Console And exit */
+		fprintf(stderr, "[FGTL {Error}]: `%s`\n", Mix_GetError());
+		exit(1);
+	}
+
+	/* Amount of channels (Max amount 
+	 * of sounds playing at the 
+	 * same time) 
+	 */
+	Mix_AllocateChannels(32);
 }
 
 /*
@@ -45,4 +64,7 @@ void FGTL_Close(void) \
 	 * i make quit dependencies SDL2
 	 */
 	SDL_Quit();
+
+	/* Quit SDL2_mixer */
+	Mix_Quit();
 }

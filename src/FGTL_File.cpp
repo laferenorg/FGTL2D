@@ -15,7 +15,7 @@
 #include <SDL2/SDL.h>
 
 /* Include header */
-#include "FGTL.h"
+#include "FGTL_File.h"
 
 /*
  * @parameter { const char* { Path } }

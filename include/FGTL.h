@@ -37,6 +37,7 @@ extern "C" {
  * function and the quit function 
  */
 #include "FGTL_File.h"
+#include "FGTL_Sound.h"
 
 #ifdef __cplusplus
 extern "C" {
