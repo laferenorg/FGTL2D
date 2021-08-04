@@ -85,6 +85,9 @@ install the dependencies used in this project.
 
 ## Documentation
 
-| Group | Pages                                                           |
-|:------|:----------------------------------------------------------------|
-| FGTL  | [FGTL_Init](../fgtl/init.html), [FGTL_Close](../fgtl/quit.html) |
+| Group                  | Pages                                                                                                                            |
+|:-----------------------|:---------------------------------------------------------------------------------------------------------------------------------|
+| FGTL                   | [FGTL_Init](../fgtl/init.html), [FGTL_Close](../fgtl/quit.html)                                                                  |
+| FGTL_FILE_LIST         | [FGTL_Get_List_File](../fgtl_file/get_list_file.html), [FGTL_Get_List_File_Extension](../fgtl_file/get_list_file_extension.html) |
+| FGTL_FILE_FOLDER_LIST  | [FGTL_Get_List_Folder](../fgtl_file/get_list_folder.html)                                                                        |
+| FGTL_FILE_CHECK        | [FGTL_Its_Folder](../fgtl_file/its_folder.html), [FGTL_Exist_Content](../fgtl_file/exist_content.html)                           |
