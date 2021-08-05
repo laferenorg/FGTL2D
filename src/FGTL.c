@@ -68,3 +68,62 @@ void FGTL_Close(void) \
 	/* Quit SDL2_mixer */
 	Mix_Quit();
 }
+
+/*
+ * @parameter { function<void>(FGTL_Event*) { update } 
+ *				uint16_t 					{ fps }
+ *			  }
+ * This function for looping program
+ * this using parameter function and
+ * fps
+ */
+void FGTL_Loop(void(*update)(FGTL_Event*), uint16_t fps) \
+{
+	/* Setup variable for 
+	 * limiting frames 
+	 */
+	uint32_t startTicks;
+
+	/* Setup variable 
+	 * for looping 
+	 */
+	uint8_t looping = 1;
+
+	/* Start main looping */
+	while(looping == 1) \
+	{
+		/* Set data variable startTicks
+		 * with ticks now 
+		 */
+		startTicks = SDL_GetTicks();
+
+		/* Setup data for 
+		 * handle event 
+		 */
+		FGTL_Event f_Event;
+
+		/* Get event */
+		FGTL_PollEvent(&f_Event);
+
+		/* If event is quit 
+		 * make looping into false
+		 */
+		if(f_Event.type == FGTL_QUIT) \
+		{
+			looping = 0;
+		}
+
+		/* Call function update,
+		 * this using for operation
+		 * something 
+		 */
+		update(&f_Event);
+
+		/* Proccess fps or another 
+		 * name set frame per seconds 
+		 */
+		if(1000 / fps > SDL_GetTicks() - startTicks) {
+			SDL_Delay(1000 / fps > SDL_GetTicks() - startTicks);
+		}
+	}
+}
