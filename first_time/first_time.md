@@ -24,7 +24,7 @@ install the dependencies used in this project.
     And if you use a **debian** or **ubuntu** operating system you can follow the installation of the 
     following dependencies.
     ```bash
-      $ apt install -y libsdl2-dev
+      $ apt install -y libsdl2-dev libsdl2-mixer-dev
     ```   
 - ### Tool
   There is a tool that you must install to help 
@@ -91,3 +91,8 @@ install the dependencies used in this project.
 | FGTL_FILE_LIST         | [FGTL_Get_List_File](../fgtl_file/get_list_file.html), [FGTL_Get_List_File_Extension](../fgtl_file/get_list_file_extension.html) |
 | FGTL_FILE_FOLDER_LIST  | [FGTL_Get_List_Folder](../fgtl_file/get_list_folder.html)                                                                        |
 | FGTL_FILE_CHECK        | [FGTL_Its_Folder](../fgtl_file/its_folder.html), [FGTL_Exist_Content](../fgtl_file/exist_content.html)                           |
+| FGTL_SOUND_EFFECT      | [FGTL_Play_Effect](../fgtl_sound/play_effect.html)                                                                               |
+| FGTL_SOUND_MUSIK       | [FGTL_Play_Music](../fgtl_sound/play_music.html), [FGTL_Execution_Music](../fgtl_sound/execution_music.html)                     |
+| FGTL_SOUND_VARIABLE    | [FGTL_Sound](../fgtl_sound/sound.html), [FGTL_Sound_Music_Choose](../fgtl_sound/sound_music_choose.html)                         |
+| FGTL_SOUND             | [FGTL_Sound_Free](../fgtl_sound/sound_free.html), [FGTL_Set_Volume](../fgtl_sound/set_volume.html)                               |
+| FGTL_SOUND_LOAD        | [FGTL_Load_Sound](../fgtl_sound/load_sound.html)                                                                                 |
