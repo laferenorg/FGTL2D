@@ -8,6 +8,16 @@
 #ifndef FGTL_HEADER_H
 #define FGTL_HEADER_H
 
+/* Include header event 
+ * for handle event 
+ */
+#include "FGTL_Event.h"
+
+/* Include header system
+ * for using system on terminal
+ */
+#include "FGTL_System.h"
+
 /*
  * If you see code
  * #ifdef __cplusplus
@@ -36,7 +46,14 @@ extern "C" {
  * file in the middle of the init 
  * function and the quit function 
  */
+/* This header for load script
+ * function for help in file
+ */
 #include "FGTL_File.h"
+
+/* This header for load script
+ * function for help in sound 
+ */
 #include "FGTL_Sound.h"
 
 #ifdef __cplusplus
@@ -47,6 +64,22 @@ extern "C" {
 	 * This function for quit all dependencies
 	 */
 	void FGTL_Close(void);
+#ifdef __cplusplus
+}
+#endif
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+	/*
+	 * @parameter { function<void>(FGTL_Event*) { update } 
+	 *				uint16_t 					{ fps }
+	 *			  }
+	 * This function for looping program
+	 * this using parameter function and
+	 * fps
+	 */
+	void FGTL_Loop(void(*update)(FGTL_Event*), uint16_t fps);
 #ifdef __cplusplus
 }
 #endif
