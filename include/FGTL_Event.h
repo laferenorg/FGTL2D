@@ -8,6 +8,9 @@
 #ifndef FGTL_EVENT_H
 #define FGTL_EVENT_H
 
+/* This enum type 
+ * for get event type 
+ */
 enum _FGTL_Type \
 {
 	FGTL_NOPE,
