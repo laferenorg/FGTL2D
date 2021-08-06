@@ -30,33 +30,38 @@ char FGTL_CHARACTER_INPUT_USER;
 
 /*
  * @parameter { FGTL_Event* { f_Event } }
- * This function for get event
+ * This function for get key on press or release
+ * and get key down or release
  */
-void FGTL_PollEvent(FGTL_Event* f_Event) \
+void FGTL_Event_Key(FGTL_Event* f_Event) \
 {
-	/* Setup data for 
-	 * handle event 
-	 * from SDL2
-	 */
-	SDL_Event s_Event;
-
-	/* Set event into nope */
-	f_Event->type = FGTL_NOPE;
-
 	/* Setup variable
 	 * for get input character
 	 * from user
 	 */
 	char characterInput;
 
+	/* Check if user give input */
 	if(FGTL_getInput(&characterInput) == 1) \
 	{
+		/* Change boolean pressed into true,
+		 * and release into false 
+		 */
 		FGTL_KEY_PRESSED_BOOL = 1;
 		FGTL_KEY_RELEASE_BOOL = 0;
+		
+		/* If character input is not equal into
+		 * character global 
+		 */
 		if(characterInput != FGTL_CHARACTER_INPUT_USER) \
 		{
 			FGTL_CHARACTER_INPUT_USER = characterInput;
 		}
+
+		/* Delete character input 
+		 * user on console 
+		 */
+		printf("\b\b");
 	} else if(FGTL_KEY_RELEASE_BOOL == 0 && \
 		FGTL_KEY_PRESSED_BOOL == 1) \
 	{
@@ -109,6 +114,20 @@ void FGTL_PollEvent(FGTL_Event* f_Event) \
 			f_Event->type = FGTL_KeyRelease;
 		}
 	}
+}
+
+/*
+ * @parameter { FGTL_Event* { f_Event } }
+ * This function for get event from
+ * SDL2
+ */
+void FGTL_Event_SDL(FGTL_Event* f_Event) \
+{
+	/* Setup data for 
+	 * handle event 
+	 * from SDL2
+	 */
+	SDL_Event s_Event;
 
 	/* If have event */
 	if(SDL_PollEvent(&s_Event)) \
@@ -144,4 +163,24 @@ void FGTL_PollEvent(FGTL_Event* f_Event) \
 			break;
 		}
 	}
+}
+
+/*
+ * @parameter { FGTL_Event* { f_Event } }
+ * This function for get event
+ */
+void FGTL_PollEvent(FGTL_Event* f_Event) \
+{
+	/* Set event into nope */
+	f_Event->type = FGTL_NOPE;
+
+	/* This for handle event
+	 * key press or release 
+	 */
+	FGTL_Event_Key(f_Event);
+
+	/* This for handle 
+	 * event from SDL2 
+	 */
+	FGTL_Event_SDL(f_Event);
 }

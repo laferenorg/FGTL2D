@@ -18,6 +18,11 @@
  */
 #include "FGTL_System.h"
 
+/* Include header scree
+ * for manage screen on console
+ */
+#include "FGTL_Screen.h"
+
 /*
  * If you see code
  * #ifdef __cplusplus

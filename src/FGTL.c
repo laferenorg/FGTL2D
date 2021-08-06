@@ -123,7 +123,7 @@ void FGTL_Loop(void(*update)(FGTL_Event*), uint16_t fps) \
 		 * name set frame per seconds 
 		 */
 		if(1000 / fps > SDL_GetTicks() - startTicks) {
-			SDL_Delay(1000 / fps > SDL_GetTicks() - startTicks);
+			SDL_Delay(1000 / fps - (SDL_GetTicks() - startTicks));
 		}
 	}
 }
